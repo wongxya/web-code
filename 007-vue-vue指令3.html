@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vue指令</title>
+</head>
+
+<body>
+    <div id="app">
+        <!-- 绑定单击事件 -->
+        <input type="button" value="v-on指令" v-on:click="doIt">
+        <input type="button" value="v-on简写" @click="doIt">
+        <!-- 绑定双击事件 -->
+        <input type="button" value="双击事件" @dblclick="doIt">
+        <!-- 绑定 changeName 事件 -->
+        <h2 @click="changeName" v-text="name"></h2>
+    </div>
+
+    <script src="https://cdn.staticfile.org/vue/2.2.2/vue.min.js"></script>
+    <script>
+        var app = new Vue({
+            el: "#app",
+            data: {
+                name: "企业码"
+            },
+            methods: {
+                doIt: function () {
+                    // 弹框
+                    alert("有数实验室倒闭了")
+                },
+                // 拿到 data 值,并执行这个函数 
+                changeName: function () {
+                    this.name += "yyds";
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>

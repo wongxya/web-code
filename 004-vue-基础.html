@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vue基础</title>
+</head>
+
+<body>
+    <!-- 基础程序 -->
+    <div id="app">
+        <!-- 单个 -->
+        {{ message }}
+        <h2 >
+            <!-- 多个元素取值 -->
+            {{ name.name1}}
+            {{ name.name2}}
+        </h2>
+        <ol>
+            <!-- 数组取值 -->
+            <li>{{ args[0] }}</li>
+            <li>{{ args[1] }}</li>
+        </ol>
+    </div>
+    <script src="https://cdn.staticfile.org/vue/2.2.2/vue.min.js"></script>
+    <script>
+        var app = new Vue({
+            el: "#app",
+            data: {
+                message: "hello world",
+                name:{
+                    name1:"张飞",
+                    name2:"关羽"
+                },
+                args:["第一个","第二个"]
+            }
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vue指令</title>
+</head>
+
+<body>
+    <script src="https://cdn.staticfile.org/vue/2.2.2/vue.min.js"></script>
+
+    <div id="id">
+        <!-- v-text 相当于 {{ message }}  -->
+        <h2 v-text="message"> 没了 </h2>
+        <h2>{{ info }} 没了</h2>
+    </div>
+
+    <script>
+        var app = new Vue({
+            el: "#id",
+            data: {
+                message: "有数实验室",
+                info:"真拉跨"
+            }
+        })
+    </script>
+</body>
+
+</html>

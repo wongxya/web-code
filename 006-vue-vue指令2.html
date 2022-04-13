@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vue指令</title>
+</head>
+<body>
+    <div id="id">
+        <!-- 如果content内容中是 html 内容会对应的进行解析 -->
+        <h2 v-html="content"></h2>
+        <!-- 直接展示 content 内容 -->
+        <h2 v-text="content"></h2>
+    </div>
+    <script src="https://cdn.staticfile.org/vue/2.2.2/vue.min.js"></script>
+    <script>
+        var app = new Vue({
+            el:"#id",
+            data:{
+                // content:"百度"
+                content:"<a href='https://www.baidu.com'> 百度</a>"
+            }
+        })
+    </script>
+
+</body>
+</html>
